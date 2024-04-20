@@ -1,0 +1,29 @@
+{
+	"name": "DS_ADLS_FOR_TABLEFILES",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "LS_adlsstoragefordev",
+			"type": "LinkedServiceReference"
+		},
+		"parameters": {
+			"sinkfiles": {
+				"type": "string"
+			}
+		},
+		"annotations": [],
+		"type": "Parquet",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobFSLocation",
+				"folderPath": {
+					"value": "@concat('salesfiles','/',formatDateTime(utcNow(),'yyyy'),'/',formatDateTime(utcNow(),'mm'),'/',formatDateTime(utcNow(),'dd'),'/')",
+					"type": "Expression"
+				},
+				"fileSystem": "sql"
+			},
+			"compressionCodec": "snappy"
+		},
+		"schema": []
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}

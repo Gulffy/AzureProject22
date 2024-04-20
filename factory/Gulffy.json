@@ -1,0 +1,9 @@
+{
+	"name": "Gulffy",
+	"location": "eastus",
+	"identity": {
+		"type": "SystemAssigned",
+		"principalId": "592c741e-3699-4406-b425-e2d0da68f154",
+		"tenantId": "113e1eb8-d695-49b2-ba68-810d4afdf274"
+	}
+}

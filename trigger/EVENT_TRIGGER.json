@@ -1,0 +1,19 @@
+{
+	"name": "EVENT_TRIGGER",
+	"properties": {
+		"annotations": [],
+		"runtimeState": "Stopped",
+		"pipelines": [],
+		"type": "BlobEventsTrigger",
+		"typeProperties": {
+			"blobPathBeginsWith": "/samplefiles/blobs/",
+			"blobPathEndsWith": ".csv",
+			"ignoreEmptyBlobs": true,
+			"scope": "/subscriptions/29fd8802-f8b4-4727-9a7e-4a4ddff36f6d/resourceGroups/Dev_environment/providers/Microsoft.Storage/storageAccounts/devstorageaccount22",
+			"events": [
+				"Microsoft.Storage.BlobCreated",
+				"Microsoft.Storage.BlobDeleted"
+			]
+		}
+	}
+}
